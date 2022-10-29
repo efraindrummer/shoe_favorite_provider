@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoe_favorite/models/shoe.dart';
 import 'package:shoe_favorite/provider/shoe_provider.dart';
+import 'package:shoe_favorite/screens/my_favorite_screen.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -37,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: IconButton(
               icon: Icon(Icons.bookmark, color: Colors.blueGrey),
               onPressed: (){
-
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyFavoriteScreen()));
               },
             ),
           )
